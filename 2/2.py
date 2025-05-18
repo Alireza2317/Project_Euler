@@ -32,7 +32,7 @@ for i in count(1):
 	if (fib := fibonacci(i)) <= 4_000_000:
 		if is_even(fib):
 			s += fib
-	
+
 	else: break
 
 print(s)
