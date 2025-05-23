@@ -5,7 +5,7 @@ import itertools
 def fibonacci(n: int) -> int:
 	if n == 1 or n == 2:
 		return 1
-	
+
 	return fibonacci(n - 1) + fibonacci(n - 2)
 
 
@@ -18,6 +18,7 @@ def count_digits(n: int) -> int:
 
 
 for i in itertools.count(1):
-	if count_digits(fibonacci(i)) >= 1000:
-		print(i)
+	f = fibonacci(i)
+	if count_digits(f) >= 1000:
+		print(i, f)
 		break
