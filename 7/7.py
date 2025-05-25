@@ -6,7 +6,7 @@ def is_prime(n: int) -> bool:
 
 	for i in range(2, ceil(sqrt(n))+1):
 		if n % i == 0: return False
-		
+
 	return True
 
 
@@ -19,5 +19,5 @@ def primes(n: int) -> int:
 		if count == n: return i
 
 
-n: int = 100010
+n: int = 10001
 print(primes(n))
