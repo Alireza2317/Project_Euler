@@ -36,13 +36,13 @@ def is_prime(number: int) -> bool:
 for first_number in range(1488, 10_000):
 	if not is_prime(first_number): continue
 
-	for d in range(1, (10_000 - first_number)//2):
-		second_number = first_number + d
-		third_number = second_number + d
+	second_number = first_number + 3330
+	third_number = second_number + 3330
 
-		if not are_permutions(first_number, second_number): continue
-		if not are_permutions(first_number, third_number): continue
+	if not are_permutions(first_number, second_number): continue
+	if not are_permutions(first_number, third_number): continue
 
-		if is_prime(second_number) and is_prime(third_number):
-			print(f'{first_number}{second_number}{third_number}')
-			exit()
+	if is_prime(second_number) and is_prime(third_number):
+		break
+
+print(f'{first_number}{second_number}{third_number}')
